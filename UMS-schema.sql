@@ -1,0 +1,1 @@
+CREATE TABLE `UMS`.`User` (`ID` INT NOT NULL , `firstname` VARCHAR(50) NOT NULL , `lastname` VARCHAR(50) NOT NULL , `email` VARCHAR(50) NOT NULL , `phone` INT(12) NOT NULL , `comments` TEXT NOT NULL , `status` VARCHAR(10) NOT NULL DEFAULT 'active' , PRIMARY KEY (`ID`)) ENGINE = InnoDB; 

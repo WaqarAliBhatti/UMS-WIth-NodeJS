@@ -1,0 +1,42 @@
+
+<div class="row">
+  <div class="col-6">
+    <h1>Users</h1>
+  </div>
+  <div class="col-6 d-flex justify-content-end">
+    <a href="/adduser" type="button" class="btn btn-primary align-self-center">Add User</a>
+  </div>
+</div>
+
+<table class="table table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">S.no</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col" class="text-center">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each rows}}
+    <tr>
+      <th scope="row">{{this.id}}</th>
+      <td>{{this.firstname}}</td>
+      <td>{{this.lastname}}</td>
+      <td>{{this.email}}</td>
+      <td>{{this.phone}}</td>
+      <td class="text-center">
+        <a href="view-user/{{this.id}}" type="button" class="btn btn-light btn-small">
+          <i class="bi bi-eye px-2"></i>View</a>
+        <a href="/edituser/{{this.id}}" type="button" class="btn btn-light btn-small">
+          <i class="bi bi-pencil px-2"></i>Edit</a>
+        <a href="/{{this.id}} " type="button" class="btn btn-light btn-small">
+          <i class="bi bi-person-x px-2"></i>Delete</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+
+</table>
