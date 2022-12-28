@@ -21,7 +21,7 @@ app.set('view engine','hbs');
 
 //Creating Pool
 const pool=mysql.createPool({
-    connectionLimit : 100,
+    connectionLimit : 100,     
     host            :process.env.DB_HOST,
     user            :process.env.DB_USER,
     password        :'',
