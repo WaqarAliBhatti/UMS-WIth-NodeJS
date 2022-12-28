@@ -115,7 +115,7 @@ exports.update = (req,res)=>{
     
     
     //Connecting the query
-    connection.query('UPDATE User SET firstname=?,lastname=?,email = ?, phone = ?, comments=? WHERE id = ?',[firstname,lastname,email,phone,comment,req.params.id],(err,rows)=>{
+    connection.query('UPDATE User SET firstname=?,lastname=?,email = ?, phone = ?, comments = ? WHERE id = ?',[firstname,lastname,email,phone,comment,req.params.id],(err,rows)=>{
         //Release the connection
         connection.release();
     
